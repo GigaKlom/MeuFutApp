@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PaginaFutActivity">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/activity_meus_futs_banner_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7406067620829259/6100261227"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_meus_futs_constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_meus_futs_banner_topo">
+
+        <TextView
+            android:id="@+id/activity_meus_futs_textview_titulo_novos_futs_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"
+            android:layout_margin="8dp"
+            android:text="@string/novos_futs_disponiveis" />
+
+        <TextView
+            android:id="@+id/activity_meus_futs_textview_novos_futs_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/activity_meus_futs_textview_titulo_novos_futs_disponiveis"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"
+            android:layout_margin="8dp"
+            tools:text="1 disponíveis"/>
+
+        <ImageButton
+            android:id="@+id/activity_meus_futs_imagebutton_assistir_rewardedAd"
+            android:accessibilityPaneTitle="Play"
+            android:layout_width="52dp"
+            android:layout_height="41dp"
+            app:layout_constraintStart_toEndOf="@+id/activity_meus_futs_textview_novos_futs_disponiveis"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@android:drawable/ic_media_play"
+            android:background="@drawable/round_button"
+            app:tint="@color/black"
+            android:contentDescription="@string/obter_novo_fut"
+            android:layout_marginStart="8dp"/>
+
+        <CheckBox
+            android:id="@+id/activity_meus_futs_checkbox_selecionar_todos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/activity_meus_futs_imagebutton_assistir_rewardedAd"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/selecionar_todos"
+            android:visibility="gone"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_meus_futs_group_novos_futs_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="
+            activity_meus_futs_textview_titulo_novos_futs_disponiveis,
+            activity_meus_futs_textview_novos_futs_disponiveis,
+            activity_meus_futs_imagebutton_assistir_rewardedAd"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ListView
+        android:id="@+id/activity_meus_futs_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_meus_futs_constraintlayout"
+        tools:listitem="@layout/item_fut"
+        android:outlineAmbientShadowColor="@color/secondaryColor"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activity_meus_futs_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add"
+        android:src="@drawable/ic_action_add" />
+</RelativeLayout>

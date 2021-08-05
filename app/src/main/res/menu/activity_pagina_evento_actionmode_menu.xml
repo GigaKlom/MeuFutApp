@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/activity_pagina_evento_actionmode_menu_marcar_furo"
+        android:title="@string/jogador_furou"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_missed"/>
+
+    <item android:id="@+id/activity_pagina_evento_actionmode_menu_remover"
+        android:title="@string/remover_do_evento"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_delete"/>
+
+
+</menu>

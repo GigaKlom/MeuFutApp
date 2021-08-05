@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/activity_lista_evento_actionmode_menu_editar"
+        android:title="@string/editar"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_edit" />
+
+    <item android:id="@+id/activity_lista_evento_actionmode_menu_remover"
+        android:title="@string/remover"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_delete"/>
+
+    <item android:id="@+id/activity_lista_evento_actionmode_menu_arquiva_evento"
+    android:title="@string/arquivar_evento"
+    app:showAsAction="never"
+    android:icon="@drawable/ic_action_archive"/>
+
+    <item android:id="@+id/activity_lista_evento_actionmode_menu_desarquiva_evento"
+    android:title="@string/desarquivar_evento"
+    app:showAsAction="never"
+    android:visible="false"/>
+
+    <item android:id="@+id/activity_lista_evento_actionmode_menu_finaliza_evento"
+    android:title="@string/finalizar_evento"
+    app:showAsAction="never"
+    android:icon="@drawable/ic_action_lock"/>
+
+    <item android:id="@+id/activity_lista_evento_actionmode_menu_finaliza_e_arquiva_evento"
+    android:title="@string/finalizar_e_arquivar"
+    app:showAsAction="never" />
+
+</menu>

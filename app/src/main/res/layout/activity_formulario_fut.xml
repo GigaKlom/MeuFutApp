@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/activity_formulario_fut_banner_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7406067620829259/6619135976"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/activity_formulario_fut_banner_topo"
+        android:layout_above="@id/activity_formulario_fut_banner_base"
+        tools:context=".ui.activity.FormularioFutActivity">
+
+        <LinearLayout
+            android:id="@+id/activity_formulario_fut_linearlayout_geral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/activity_formulario_fut_edittext_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="@string/local"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords" />
+
+                <ImageButton
+                    android:id="@+id/activity_formulario_fut_imagebutton_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/apagar_tudo"
+                    android:src="@drawable/ic_action_clear"
+                    android:visibility="gone"
+                    tools:ignore="RtlHardcoded" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/precoAvulso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/preco_para_avulso_rs"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/activity_formulario_fut_edittext_avulso"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:labelFor="@id/precoAvulso"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/activity_formulario_fut_linearlayout_fut_mensal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/activity_formulario_fut_checkbox_fut_mensal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fut_mensal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/este_campo_n_o_poder_ser_modificado_posteriormente" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_formulario_fut_linearlayout_mensal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/precoMensalista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/preco_para_mensalista_rs"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/activity_formulario_fut_edittext_mensal"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:layout_constraintStart_toEndOf="@id/precoMensalista"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_formulario_fut_linear_layout_dia_da_semana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dia_da_semana"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/activity_formulario_fut_radio_group_dia_da_semana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/activity_formulario_fut_radio_button_domingo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/domingo" />
+
+                    <RadioButton
+                        android:id="@+id/activity_formulario_fut_radio_button_segunda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/segunda" />
+
+                    <RadioButton
+                        android:id="@+id/activity_formulario_fut_radio_button_terca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ter_a" />
+
+                    <RadioButton
+                        android:id="@+id/activity_formulario_fut_radio_button_quarta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quarta" />
+
+                    <RadioButton
+                        android:id="@+id/activity_formulario_fut_radio_button_quinta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quinta" />
+
+                    <RadioButton
+                        android:id="@+id/activity_formulario_fut_radio_button_sexta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sexta" />
+
+                    <RadioButton
+                        android:id="@+id/activity_formulario_fut_radio_button_sabado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s_bado" />
+                </RadioGroup>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_formulario_fut_textview_horario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="@string/_00_00"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/activity_formulario_fut_imagebutton_horario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_button"
+                        android:contentDescription="@string/horario"
+                        android:src="@drawable/ic_action_time"
+                        android:layout_margin="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/activity_formulario_fut_textview_horario"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/black" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/precoQuadra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/aluguel_da_quadra_rs"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/activity_formulario_fut_edittext_aluguel_da_quadra"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/activity_formulario_fut_banner_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7406067620829259/9053727623"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

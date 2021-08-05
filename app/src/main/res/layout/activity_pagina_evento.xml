@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.PaginaEventoActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_pagina_evento_constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/activity_pagina_evento_banner_topo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-7406067620829259/7712725798"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/avtivity_pagina_evento_textview_titulo_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/data2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_banner_topo" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_evento_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/avtivity_pagina_evento_textview_titulo_data"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_banner_topo"
+            tools:text="28/06/2021" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/horario2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_evento_data"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_banner_topo"  />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_horario"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_banner_topo"
+            tools:text="15:15" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_status_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/status_do_evento"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/avtivity_pagina_evento_textview_titulo_data" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_status_do_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/activity_pagina_evento_textview_status_evento"
+            app:layout_constraintTop_toBottomOf="@id/avtivity_pagina_evento_textview_titulo_data"
+            tools:text="Ativo"
+            tools:textColor="@android:color/holo_green_light" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/activity_pagina_evento_switch_mostra_dados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_status_do_evento"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_evento_data" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_titulo_preco_avulso_quadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/pre_o_da_quadra"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_status_evento" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_preco_quadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/previsao_de_ganhos"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_titulo_preco_avulso_quadra" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_titulo_ganho_obtido_avulsos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/ganho_obtido"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_preco_quadra" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_titulo_jogadores_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/jogadores_no_evento"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_titulo_ganho_obtido_avulsos" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_jogadores_pagos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/jogadores_pagos"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_titulo_jogadores_evento" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_preco_avulso_quadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_titulo_preco_avulso_quadra"
+            app:layout_constraintTop_toBottomOf="@id/activity_pagina_evento_status_do_evento"
+            tools:text="R$ 600,00" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_previsao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_preco_quadra"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_preco_avulso_quadra"
+            tools:text="R$ 600,00" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_obtido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_titulo_ganho_obtido_avulsos"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_previsao"
+            tools:text="R$ 600,00" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_total_jogadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_titulo_jogadores_evento"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_obtido"
+            tools:text="0 jogadores" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_pagos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_jogadores_pagos"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_total_jogadores"
+            tools:text="15 jogadores já pagaram" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_referencia_mensal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/dados_mensal"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_jogadores_pagos" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_referencia_mensal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_referencia_mensal"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_jogadores_pagos"
+            tools:text="6/2021" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/activity_pagina_evento_switch_mostra_dados_mensal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_referencia_mensal"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_jogadores_pagos" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_preco_mensal_quadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/preco_mensal_da_quadra"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_switch_mostra_dados_mensal" />
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_obtido_mensalistas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_obtido_com_mensalistas"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_preco_mensal_quadra"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_obtido_avulsos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_obtido_com_avulsos"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_obtido_mensalistas"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_lucro_prejuizo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lucro_prejuizo"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_obtido_avulsos"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_numero_jogadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n_de_jogadores_diferentes"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_lucro_prejuizo"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_furos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vezes_que_furaram"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_calotes"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_textview_titulo_calotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calotes_recebidos"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_textview_titulo_numero_jogadores"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_preco_mensal_quadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_preco_mensal_quadra"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_switch_mostra_dados_mensal"
+            tools:text="R$ 600,00"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_total_obtido_mensalistas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_obtido_mensalistas"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_preco_mensal_quadra"
+            tools:text="R$ 200,00"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_total_obtido_avulsos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_obtido_avulsos"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_total_obtido_mensalistas"
+            tools:text="R$ 500,00"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_lucro_prejuizo_mensal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_lucro_prejuizo"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_total_obtido_avulsos"
+            tools:text="R$ 50,00"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_n_jogadores_diferentes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_numero_jogadores"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_lucro_prejuizo_mensal"
+            tools:text="32 jogadores"
+            android:layout_marginStart="8dp"/>
+
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_calotes_recebidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_calotes"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_n_jogadores_diferentes"
+            tools:text="3 calotes"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_evento_vezes_que_furaram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_evento_textview_titulo_furos"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_calotes_recebidos"
+            tools:text="5 vezes"
+            android:layout_marginStart="8dp"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_evento_group_dados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="
+            activity_pagina_evento_titulo_preco_avulso_quadra,
+            activity_pagina_evento_textview_titulo_preco_quadra,
+            activity_pagina_evento_titulo_ganho_obtido_avulsos,
+            activity_pagina_evento_titulo_jogadores_evento,
+            activity_pagina_evento_textview_titulo_jogadores_pagos,
+            activity_pagina_evento_preco_avulso_quadra,
+            activity_pagina_evento_previsao,
+            activity_pagina_evento_textview_obtido,
+            activity_pagina_evento_textview_total_jogadores,
+            activity_pagina_evento_textview_pagos" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_evento_group_referencia_mensal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="activity_pagina_evento_textview_referencia_mensal,
+        activity_pagina_evento_referencia_mensal,
+        activity_pagina_evento_switch_mostra_dados_mensal"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_evento_group_dados_mensal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="activity_pagina_evento_textview_titulo_preco_mensal_quadra, activity_pagina_evento_textview_titulo_obtido_avulsos, activity_pagina_evento_textview_titulo_obtido_mensalistas,
+        activity_pagina_evento_textview_titulo_lucro_prejuizo, activity_pagina_evento_textview_titulo_numero_jogadores, activity_pagina_evento_textview_titulo_calotes, activity_pagina_evento_textview_titulo_furos,
+        activity_pagina_evento_preco_mensal_quadra,
+        activity_pagina_evento_total_obtido_mensalistas,
+        activity_pagina_evento_total_obtido_avulsos,
+        activity_pagina_evento_lucro_prejuizo_mensal,
+        activity_pagina_evento_n_jogadores_diferentes,
+        activity_pagina_evento_calotes_recebidos,
+        activity_pagina_evento_vezes_que_furaram"/>
+
+        <CheckBox
+            android:id="@+id/activity_pagina_evento_checkbox_selecionar_todos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_evento_vezes_que_furaram"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/selecionar_todos"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/activity_pagina_evento_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_pagina_evento_constraintlayout"
+        tools:listitem="@layout/item_jogadorevento" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activity_pagina_evento_fab_adicionar_jogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/adicionar_jogador"
+        android:src="@drawable/ic_action_add"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

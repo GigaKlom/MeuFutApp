@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/activity_pagina_evento_menu_finaliza_evento"
+        android:title="@string/finalizar_evento"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_lock"/>
+
+    <item android:id="@+id/activity_pagina_evento_menu_deleta_evento"
+        android:title="@string/deletar_evento"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_delete"/>
+</menu>

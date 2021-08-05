@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/activity_pagina_fut_menu_adicionar_ao_evento_solicitado"
+        android:title="@string/adicionar_ao_evento_solicitado"
+        android:icon="@drawable/ic_action_done"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item android:id="@+id/activity_pagina_fut_menu_edita_fut"
+        android:title="@string/editar"
+        android:icon="@drawable/ic_action_edit"
+        app:showAsAction="ifRoom"
+        android:visible="true"/>
+
+    <item android:id="@+id/activity_pagina_fut_menu_deleta_fut"
+        android:title="@string/deletar_este_fut"
+        android:icon="@drawable/ic_action_delete"
+        app:showAsAction="ifRoom"
+        android:visible="true"/>
+
+
+    <item android:id="@+id/activity_pagina_fut_menu_abre_eventos"
+        android:title="@string/abrir_eventos_deste_fut"
+        android:icon="@drawable/ic_action_soccer_green"
+        app:showAsAction="ifRoom"
+        android:visible="true"/>
+</menu>

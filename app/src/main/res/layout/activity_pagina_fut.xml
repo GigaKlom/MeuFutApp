@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PaginaFutActivity"
+    android:orientation="vertical">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/activity_pagina_fut_banner_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7406067620829259/3801400949"
+        android:layout_centerHorizontal="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_pagina_fut_dados_fut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.PaginaFutActivity"
+        android:layout_below="@+id/activity_pagina_fut_banner_topo">
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_textview_titulo_novos_jogadores_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:text="@string/jogadores_disponiveis" />
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_textview_novos_jogadores_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_textview_titulo_novos_jogadores_disponiveis"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            tools:text="4 disponíveis"/>
+
+        <ImageButton
+            android:id="@+id/activity_pagina_fut_imagebutton_assistir_rewardedAd"
+            android:layout_width="52dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/obter_novo_fut"
+            android:src="@android:drawable/ic_media_play"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_textview_novos_jogadores_disponiveis"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/round_button"
+            app:tint="@color/black"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_novos_futs_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="
+            activity_pagina_fut_textview_titulo_novos_jogadores_disponiveis,
+            activity_pagina_fut_textview_novos_jogadores_disponiveis,
+            activity_pagina_fut_imagebutton_assistir_rewardedAd"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_textview_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_textview_titulo_novos_jogadores_disponiveis"
+            tools:text="Portuguesa Santista"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_textview_tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/tipo"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_textview_local" />
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_textview_tipo"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_textview_local"
+            tools:text="MENSAL"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/activity_pagina_fut_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_tipo"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_textview_local"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_dia_semana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_textview_local"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_textview_titulo_novos_jogadores_disponiveis"
+            tools:text="DOMINGO"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_texto_padrao_avulso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/padrao_avulso"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_switch"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_padrao_avulso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_texto_padrao_avulso"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_switch"
+            tools:text="R$ 15,00"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_texto_padrao_mensalista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/padrao_mensalista"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_texto_padrao_avulso"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_padrao_mensalista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_texto_padrao_mensalista"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_padrao_avulso"
+            tools:text="R$ 45,00"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_texto_jogadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/jogadores_"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_texto_padrao_mensalista"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_numero_jogadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_texto_jogadores"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_padrao_mensalista"
+            tools:text="5 jogadores"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_texto_mensalistas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/mensalistas_"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_texto_jogadores"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_numero_mensalistas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_texto_mensalistas"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_numero_jogadores"
+            tools:text="3 mensalistas"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_texto_preco_da_quadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/preco_da_quadra"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_texto_mensalistas"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_preco_da_quadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_texto_preco_da_quadra"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_numero_mensalistas"
+            tools:text="R$ 600,00" />
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_texto_ganho_com_mensalistas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/ganho_com_mensalistas"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_texto_preco_da_quadra" />
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_ganho_esperado_mensalistas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_texto_ganho_com_mensalistas"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_preco_da_quadra"
+            tools:text="R$ 450,00"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_texto_lucro_prejuizo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/lucro_prejuizo"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_texto_ganho_com_mensalistas"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_lucro_prejuizo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_texto_lucro_prejuizo"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_ganho_esperado_mensalistas"
+            tools:text="R$ 50,00"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_texto_ganho_com_avulsos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/ganho_com_avulsos"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_texto_lucro_prejuizo"/>
+
+        <TextView
+            android:id="@+id/activity_pagina_fut_ganho_esperado_avulsos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_pagina_fut_texto_ganho_com_avulsos"
+            app:layout_constraintTop_toBottomOf="@+id/activity_pagina_fut_lucro_prejuizo"
+            tools:text="R$ 450,00" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_padrao_avulso"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="activity_pagina_fut_texto_padrao_avulso,activity_pagina_fut_padrao_avulso"/>
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_padrao_mensalista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="activity_pagina_fut_padrao_mensalista,activity_pagina_fut_texto_padrao_mensalista"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_numero_jogadores"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="activity_pagina_fut_texto_jogadores,activity_pagina_fut_numero_jogadores"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_numero_mensalistas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:constraint_referenced_ids="activity_pagina_fut_texto_mensalistas,activity_pagina_fut_numero_mensalistas"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_preco_quadra"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="activity_pagina_fut_texto_preco_da_quadra,activity_pagina_fut_preco_da_quadra"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_ganho_mensalistas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="activity_pagina_fut_texto_ganho_com_mensalistas,activity_pagina_fut_ganho_esperado_mensalistas"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_ganho_avulsos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="activity_pagina_fut_texto_ganho_com_avulsos,activity_pagina_fut_ganho_esperado_avulsos"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_pagina_fut_group_lucro_prejuizo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:constraint_referenced_ids="activity_pagina_fut_lucro_prejuizo,activity_pagina_fut_texto_lucro_prejuizo"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/activity_pagina_fut_checkbox_selecionar_todos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_pagina_fut_dados_fut"
+        android:text="@string/selecionar_todos"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/activity_pagina_fut_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_pagina_fut_checkbox_selecionar_todos"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dp"
+        tools:listitem="@layout/item_jogadorfut" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activity_pagina_fut_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add"
+        android:src="@drawable/ic_action_add" />
+</RelativeLayout>

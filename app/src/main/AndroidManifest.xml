@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.gigatron.futbusiness">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_soccer_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_soccer_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FutBusiness">
+        <activity android:name=".ui.activity.HomePageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.PaginaEventoActivity" />
+        <activity android:name=".ui.activity.MeusEventosActivity" />
+        <activity android:name=".ui.activity.FormularioJogadorActivity" />
+        <activity android:name=".ui.activity.FormularioFutActivity" />
+        <activity android:name=".ui.activity.MeusFutsActivity"/>
+        <activity android:name=".ui.activity.PaginaFutActivity" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2817098768408407~2779420744"/>
+    </application>
+
+</manifest>

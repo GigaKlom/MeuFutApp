@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.FormularioJogadorActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/activity_formulario_jogador_banner_topo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:adSize="BANNER"
+                app:adUnitId="ca-app-pub-7406067620829259/6235992591"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <FrameLayout
+                android:id="@+id/activity_formulario_jogador_frame_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_banner_topo">
+
+                <EditText
+                    android:id="@+id/activity_formulario_jogador_edittext_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:hint="@string/nome"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords" />
+
+                <ImageButton
+                    android:id="@+id/activity_formulario_jogador_imagebutton_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/apagar_tudo"
+                    android:src="@drawable/ic_action_clear"
+                    android:visibility="gone"
+                    tools:ignore="RtlHardcoded" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_titulo_preco_avulso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/valor_avulso"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_frame_layout" />
+
+            <EditText
+                android:id="@+id/activity_formulario_jogador_edittext_avulso"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="@string/insira_o_valor"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_titulo_preco_avulso" />
+
+            <CheckBox
+                android:id="@+id/activity_formulario_jogador_checkbox_padrao_avulso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/padrao_do_fut"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_edittext_avulso"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_valor_mensalistas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/valor_mensal"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_checkbox_padrao_avulso" />
+
+            <EditText
+                android:id="@+id/activity_formulario_jogador_edittext_mensal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/insira_o_valor"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_valor_mensalistas" />
+
+            <CheckBox
+                android:id="@+id/activity_formulario_jogador_checkbox_padrao_mensal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/padrao_do_fut"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_edittext_mensal"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <CheckBox
+                android:id="@+id/activity_formulario_jogador_checkbox_mensalista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/o_jogador_mensalista"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_checkbox_padrao_mensal" />
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_informacoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="@string/informa_es_sobre_o_jogador"
+                android:textSize="20sp"
+                android:textColor="@color/secondaryColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_checkbox_mensalista" />
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_titulo_presente_avulso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/eventos_presentes_como_avulso"
+                android:textSize="18sp"
+                android:textColor="@color/secondaryColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_informacoes" />
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_presente_avulso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/secondaryColor"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/activity_formulario_jogador_textview_titulo_presente_avulso"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_informacoes"
+                tools:text="20 eventos" />
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_titulo_presente_mensal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/eventos_presente_como_mensalista"
+                android:textSize="18sp"
+                android:textColor="@color/secondaryColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_titulo_presente_avulso" />
+
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_presente_mensal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/secondaryColor"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/activity_formulario_jogador_textview_titulo_presente_mensal"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_presente_avulso"
+                tools:text="20 eventos" />
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_titulo_calotes_dados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/calotes_dados"
+                android:textSize="18sp"
+                android:textColor="@color/secondaryColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_titulo_presente_mensal" />
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_calotes_dados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/secondaryColor"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/activity_formulario_jogador_textview_titulo_calotes_dados"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_presente_mensal"
+                tools:text="20 calotes" />
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_titulo_furos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/vezes_que_furou"
+                android:textSize="18sp"
+                android:textColor="@color/secondaryColor"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_titulo_calotes_dados" />
+
+            <TextView
+                android:id="@+id/activity_formulario_jogador_textview_furos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/secondaryColor"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/activity_formulario_jogador_textview_titulo_furos"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_jogador_textview_calotes_dados"
+                tools:text="15 vezes" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/activity_formulario_jogador_group_informacoes_jogador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_formulario_jogador_textview_titulo_furos"
+                app:layout_constraintEnd_toEndOf="@+id/activity_formulario_jogador_textview_presente_mensal"
+                app:layout_constraintStart_toStartOf="@+id/activity_formulario_jogador_textview_titulo_presente_mensal"
+                app:layout_constraintTop_toTopOf="@+id/activity_formulario_jogador_textview_informacoes"
+                app:constraint_referenced_ids="
+        activity_formulario_jogador_textview_informacoes, activity_formulario_jogador_textview_titulo_presente_avulso,
+        activity_formulario_jogador_textview_presente_avulso,
+        activity_formulario_jogador_textview_titulo_presente_mensal,
+        activity_formulario_jogador_textview_presente_mensal,
+        activity_formulario_jogador_textview_titulo_calotes_dados,
+        activity_formulario_jogador_textview_calotes_dados,
+        activity_formulario_jogador_textview_titulo_furos,
+        activity_formulario_jogador_textview_furos"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/activity_formulario_jogador_banner_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7406067620829259/9792094223"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

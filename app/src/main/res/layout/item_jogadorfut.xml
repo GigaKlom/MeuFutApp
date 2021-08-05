@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/item_jogadorfut_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:textSize="20sp"
+            tools:text="Pedro"
+            android:textColor="@color/secondaryColor"/>
+
+        <TextView android:id="@+id/item_jogadorfut_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            tools:text="Mensalista - R$ 40,00"
+            android:textColor="@color/secondaryColor"/>
+    </LinearLayout>
+
+
+    <CheckBox android:id="@+id/item_jogadorfut_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/activity_pagina_fut_actionmode_menu_copiar_para_outro_fut"
+        android:title="@string/copiar_para_outro_fut"
+        android:icon="@drawable/ic_action_copy"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/activity_pagina_fut_actionmode_menu_remover"
+        android:title="@string/remover"
+        android:icon="@drawable/ic_action_delete"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/activity_pagina_fut_actionmode_menu_adicionar_evento"
+        android:title="@string/adicionar_a_um_evento"
+        android:icon="@drawable/ic_action_add"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/activity_pagina_fut_actionmode_menu_mudar_status"
+        android:title="@string/mudar_status"
+        android:icon="@drawable/ic_action_add_altera_status"
+        app:showAsAction="never"/>
+
+</menu>

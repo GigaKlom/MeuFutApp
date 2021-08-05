@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup android:id="@+id/fragment_cria_evento_mensal_radiogroup_meses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_janeiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/janeiro"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_fevereiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fevereiro"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_marco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mar_o"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_abril"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/abril"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_maio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maio"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_junho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/junho"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_julho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/julho"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_agosto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agosto"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_setembro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setembro"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_outubro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/outubro"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_novembro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/novembro"/>
+
+        <RadioButton android:id="@+id/fragment_cria_evento_mensal_radiobutton_dezembro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dezembro"/>
+    </RadioGroup>
+</ScrollView>

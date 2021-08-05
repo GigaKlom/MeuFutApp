@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MeusEventosActivity">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/activity_meus_eventos_banner_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7406067620829259/4057084648"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_meus_eventos_constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_meus_eventos_banner_topo">
+
+        <TextView
+            android:id="@+id/activity_meus_eventos_textview_titulo_novos_eventos_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:text="@string/novos_eventos" />
+
+        <TextView
+            android:id="@+id/activity_meus_eventos_textview_novos_eventos_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/activity_meus_eventos_textview_titulo_novos_eventos_disponiveis"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            tools:text="4 disponíveis"/>
+
+        <ImageButton
+            android:id="@+id/activity_meus_eventos_imagebutton_assistir_rewardedAd_eventos"
+            android:layout_width="52dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/obter_novo_fut"
+            android:src="@android:drawable/ic_media_play"
+            app:layout_constraintStart_toEndOf="@+id/activity_meus_eventos_textview_novos_eventos_disponiveis"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/round_button"
+            app:tint="@color/black"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_meus_eventos_group_novos_futs_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="
+            activity_meus_eventos_textview_titulo_novos_eventos_disponiveis,
+            activity_meus_eventos_textview_novos_eventos_disponiveis,
+            activity_meus_eventos_imagebutton_assistir_rewardedAd_eventos"/>
+
+        <TextView
+            android:id="@+id/activity_meus_eventos_textview_titulo_novos_arquivamentos_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_meus_eventos_imagebutton_assistir_rewardedAd_eventos"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:text="@string/novos_arquivamentos" />
+
+        <TextView
+            android:id="@+id/activity_meus_eventos_textview_novos_arquivamentos_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/activity_meus_eventos_textview_titulo_novos_arquivamentos_disponiveis"
+            app:layout_constraintTop_toBottomOf="@id/activity_meus_eventos_imagebutton_assistir_rewardedAd_eventos"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            tools:text="2 disponíveis"/>
+
+        <ImageButton
+            android:id="@+id/activity_meus_eventos_imagebutton_assistir_rewardedAd_arquivamentos"
+            android:layout_width="52dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/obter_novo_fut"
+            android:src="@android:drawable/ic_media_play"
+            app:layout_constraintStart_toEndOf="@id/activity_meus_eventos_textview_novos_arquivamentos_disponiveis"
+            app:layout_constraintTop_toBottomOf="@id/activity_meus_eventos_imagebutton_assistir_rewardedAd_eventos"
+            android:background="@drawable/round_button"
+            app:tint="@color/black"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/activity_meus_eventos_group_novos_arquivamentos_disponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="
+            activity_meus_eventos_textview_titulo_novos_arquivamentos_disponiveis,
+            activity_meus_eventos_textview_novos_arquivamentos_disponiveis,
+            activity_meus_eventos_imagebutton_assistir_rewardedAd_arquivamentos"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/activity_meus_eventos_switch_mostrar_arquivados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/mostrar_eventos_arquivados"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/activity_meus_eventos_textview_titulo_novos_arquivamentos_disponiveis"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <CheckBox
+            android:id="@+id/activity_meus_eventos_checkbox_selecionar_todos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/activity_meus_eventos_switch_mostrar_arquivados"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/selecionar_todos"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/activity_meus_eventos_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_meus_eventos_constraintlayout"
+        tools:listitem="@layout/item_evento"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activity_meus_eventos_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add"
+        android:src="@drawable/ic_action_add" />
+</RelativeLayout>
